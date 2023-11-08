@@ -1,23 +1,23 @@
 # Amiet_Theory_Trailing_edge_noise
 ## Description:
 
-This code predicts trailing-edge noise for airfoils using Amiet's theory. The code is linked with XFOIL to obtain the boundary layer parameters. Both, the approximation of far-field noise (recommended for aspect ratio larger than 3) and the sincardinal formulation are implemented.
+This code predicts trailing-edge noise for airfoils using Amiet's theory. The code is linked with XFOIL to obtain the boundary layer parameters. Both the approximation of far-field noise (recommended for aspect ratio larger than 3) and the sincardinal formulation are implemented.
 
 ## What is needed to run the code
 
-This code is ready to use in a matlab for windows, specifically for the 2019 version. For running the code in linux or other operational systems, changes in the scripts migth be conducted accordinly, mainly in the script: "XFOIL_new_airfoil.mat". 
+This code is ready to use in a Matlab for Windows, specifically for the 2019 version. For running the code in Linux or other operational systems, changes in the scripts might be conducted accordingly, mainly in the script: "XFOIL_new_airfoil.mat". 
 
 The executable of XFOIL is in the folder. The user does not need to install anything regarding this. 
 
 ## Trailing-edge noise prediction method
-This code is based on Amiet's theory [1]. The aeroacoustics transfer function is modeled for subcritial and supercritical gusts considering also the backscattering effect of the leading edge proposed by Roger and Moreau [2]. 
+This code is based on Amiet's theory [1]. The aeroacoustics transfer function is modeled for subcritical and supercritical gusts, also considering the backscattering effect of the leading edge proposed by Roger and Moreau [2]. 
 
-The reference system is x located in the chordwise direction, y in the spanwise direction and z perpendicular to the wall. The origin of coordinates is located at the trailing edge at the midspan, as shown: 
+The reference system is x located in the chordwise direction, y in the spanwise direction, and z perpendicular to the wall. The origin of coordinates is located at the trailing edge at the midspan, as shown: 
 ![Inputs.](reference_system.PNG "This is a sample image.")
 
 The far-field approximation is implemented when the input is defined as k_y = 0. Otherwise, the sincardinal formulation shown by Roger and Moreau is used [3]. 
 
-The spanwise correlation length is modeled using Corco's function with the constant equal to 1.4. this can be changed on: ``spanwise_corlength_K2.m`` line 6.
+The spanwise correlation length is modeled using Corco's function with  the Corcos' constant equal to 1.4. this can be changed on: ``spanwise_corlength_K2.m`` line 6.
 
 The wall-pressure spectrum can be calculated using any of the following methods:
 1. Amiet's model [1]
@@ -26,7 +26,7 @@ The wall-pressure spectrum can be calculated using any of the following methods:
 4. Kammrruzamann model [6]
 5. TNO-Blame model [7].
 
-The inputs for those models are calculated using XFOIL simulations. For that the coordinates for the airfoil are needed. 
+The inputs for those models are calculated using XFOIL simulations. For that, the coordinates for the airfoil are needed. 
 
 ## How to run the code
 
@@ -35,26 +35,26 @@ The user needs to run ``Main_TE_noise_prediction.m``. This will open a dialog bo
 
 
 The inputs are:
-* airfoil: this does not really matter since the coordinates needs to be updated 
+* airfoil: this does not really matter since the coordinates need to be updated 
 * chord
 * Span
 * Inflow velocity
 * Angle of attack
 * Location of forced transition for the suction side (1 for natural transition)
 * Location of forced transition for the pressure side (1 for natural transition)
-* Position for extracting the boundary layer paraters (close to the trailing edge)
+* Position for extracting the boundary layer parameters (close to the trailing edge)
 * Oberver location coordinate in x
 * Observer location coordinate in y
 * Observer location coordinate in z
-* k_y_{max}: this is the maximum wave number in the spanwise direction for integrate in case the sin cardinal formulation is used, if it it equal to 0, the far-field approximation is used. The sincardinal formulation takes much longer than the far-field approximation. 
+* k_y_{max}: this is the maximum wave number in the spanwise direction for integration in case the sin cardinal formulation is used. If it it equal to 0, the far-field approximation is used. The sincardinal formulation takes much longer than the far-field approximation. 
 
 
 Later, a  dialog box to select the wall-pressure spectrum model is shown:
 ![Inputs.](WPS.PNG "This is a sample image.")
 
-The coordinates of the airfoils need to be on the same folder in a .txt file in a format redable by XFOIL. The file cannot  have any header. To update the name of the file change line 6 of ``XFOIL_new_airfoil.m``
+The coordinates of the airfoils need to be in the same folder in a .txt file in a format readable by XFOIL. The file cannot  have any header. To update the name of the file, change line 6 of ``XFOIL_new_airfoil.m``
 
-The plots shown the far-field noise and the wall-pressure spectra on the suction and pressure sides. 
+The plots show the far-field noise and the wall-pressure spectra on the suction and pressure sides. 
 
 ## Associated publication:
 The comparison of Amiet's theory with wind tunnel experiments for several airfoils is shown in:
