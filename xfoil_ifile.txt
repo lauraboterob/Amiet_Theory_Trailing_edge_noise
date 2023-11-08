@@ -1,0 +1,19 @@
+load naca63018.txt 
+
+
+oper
+visc
+600000
+mach 0.0882353
+iter 1000
+vpar
+N 9.0046
+
+vpar
+xtr
+0.05
+0.05
+
+alfa 3
+cpwr  XFOIL_CP_Output
+DUMP XFOIL_Output
