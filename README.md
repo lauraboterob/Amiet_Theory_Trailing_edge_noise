@@ -13,7 +13,7 @@ The executable of XFOIL is in the folder. The user does not need to install anyt
 This code is based on Amiet's theory [1]. The aeroacoustics transfer function is modeled for subcritial and supercritical gusts considering also the backscattering effect of the leading edge proposed by Roger and Moreau [2]. 
 
 The reference system is x located in the chordwise direction, y in the spanwise direction and z perpendicular to the wall. The origin of coordinates is located at the trailing edge at the midspan, as shown: 
-![Inputs.](reference_system.png "This is a sample image.")
+![Inputs.](reference_system.PNG "This is a sample image.")
 
 The far-field approximation is implemented when the input is defined as k_y = 0. Otherwise, the sincardinal formulation shown by Roger and Moreau is used [3]. 
 
@@ -31,7 +31,7 @@ The inputs for those models are calculated using XFOIL simulations. For that the
 ## How to run the code
 
 The user needs to run ``Main_TE_noise_prediction.m``. This will open a dialog box:
-![Inputs.](inputs.png "This is a sample image.")
+![Inputs.](inputs.PNG "This is a sample image.")
 
 
 The inputs are:
@@ -50,7 +50,7 @@ The inputs are:
 
 
 Later, a  dialog box to select the wall-pressure spectrum model is shown:
-![Inputs.](WPS.png "This is a sample image.")
+![Inputs.](WPS.PNG "This is a sample image.")
 
 The coordinates of the airfoils need to be on the same folder in a .txt file in a format redable by XFOIL. The file cannot  have any header. To update the name of the file change line 6 of ``XFOIL_new_airfoil.m``
 
