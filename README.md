@@ -56,6 +56,10 @@ The coordinates of the airfoils need to be on the same folder in a .txt file in 
 
 The plots shown the far-field noise and the wall-pressure spectra on the suction and pressure sides. 
 
+## Associated publication:
+The comparison of Amiet's theory with wind tunnel experiments for several airfoils is shown in:
+L. Botero-Bolívar, F. L. dos Santos, C. H. Venner, and L. D. de Santana. Experimental and predicted leading- and trailing-edge noise of symmetric airfoils under zero mean-loading. In: Applied Acoustics 212 (2023), p. 109579. DOI: 10.1016/j.apacoust.2023.109579.
+
 ## References
 [1] Amiet, R., “Noise due to turbulent flow past a trailing edge,” Journal of Sound and Vibration, Vol. 47, No. 3, 1976, pp. 387–393. https://doi.org/10.1016/0022-460X(76)90948-2.
 [3] Roger, M., “On broadband jet–ring interaction noise and aerofoil turbulence-interaction noise predictions,” Journal of Fluid Mechanics, Vol. 653, 2010, pp. 337–364. https://doi.org/10.1017/S0022112010000285.
